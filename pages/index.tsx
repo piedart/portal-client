@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("http://localhost:4000/api/auth/login");
+    router.push("http://api.britsov.uk/api/auth/login");
   };
   return (
     <div>

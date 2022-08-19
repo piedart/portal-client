@@ -15,7 +15,7 @@ function MyApp({ user, Component, pageProps, router }: any) {
 MyApp.getInitialProps = async ({ ctx }: any) => {
   try {
     const user = (
-      await axios.get("http://localhost:4000/api/auth/status", {
+      await axios.get("http://api.britsov.uk/api/auth/status", {
         withCredentials: true,
         headers: { Cookie: `connect.sid=${ctx.req.cookies["connect.sid"]}` },
       })

@@ -12,11 +12,11 @@ const renderQualifications = (user: any) => {
   else {
     return (
       <div>
-        {user.qualifications.map((dbQualification: any) => {
+        {user.qualifications.map((dbQualification: any, index: number) => {
           const qualification = qualifications.find((qualification) => qualification.id === dbQualification.qualificationId);
           const level = qualification?.levels.find((level) => level.id === dbQualification.roleId);
           return (
-            <div className={styles.Qualification}>
+            <div className={styles.Qualification} key={`qualification-${index}`}>
               {/* @ts-ignore */}
               <div className={styles.QualificationColour} style={{ backgroundColor: qualification?.colour }}></div>
               <div className={styles.QualificationLabel}>
@@ -97,7 +97,9 @@ const renderActivityWarnings = (user: any) => {
   }
 };
 
-const renderDeployments = (user: any) => {};
+const renderDeployments = (user: any) => {
+  return <div></div>;
+};
 
 const DashboardHome = ({ user }: any) => {
   let rankslide;
