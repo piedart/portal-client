@@ -59,6 +59,7 @@
 .RankName {
   font-weight: 400;
   font-size: 20px;
+  color: var(--primary);
 }
 
 .SummaryRight {
@@ -83,10 +84,12 @@
 
 .AttendanceValue {
   font-weight: 500;
+  color: var(--primary);
 }
 
 .AttendanceCaption {
   font-size: 14px;
+  color: var(--primary);
 }
 
 .Row2 {
@@ -147,6 +150,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 15px;
+  color: var(--primary);
 }
 
 .QualificationName {
@@ -165,7 +169,7 @@
 }
 
 .WarningsHeader {
-  color: var(--blue);
+  color: var(--primary);
   font-weight: 500;
   margin-left: 5%;
   margin-top: 15px;
@@ -188,13 +192,13 @@
 }
 
 .WarningTitle {
-  color: var(--blue);
+  color: var(--primary);
   font-weight: 500;
   font-size: 15px;
 }
 
 .WarningDescription {
-  color: var(--blue);
+  color: var(--primary);
   font-weight: 300;
   font-size: 14px;
 }
@@ -205,13 +209,13 @@
 }
 
 .WarningIssuedByLabel {
-  color: var(--blue);
+  color: var(--primary);
   font-weight: 500;
   font-size: 15px;
 }
 
 .WarningIssuedByValue {
-  color: var(--blue);
+  color: var(--primary);
   font-weight: 300;
   font-size: 15px;
   margin-left: 5px;
@@ -223,13 +227,13 @@
 }
 
 .WarningDateLabel {
-  color: var(--blue);
+  color: var(--primary);
   font-weight: 500;
   font-size: 15px;
 }
 
 .WarningDateValue {
-  color: var(--blue);
+  color: var(--primary);
   font-weight: 300;
   font-size: 15px;
   margin-left: 5px;

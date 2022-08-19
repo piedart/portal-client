@@ -10,6 +10,9 @@
   --grey: #f3f3f3;
   --white: #ffffff;
 }
+:root {
+  color-scheme: only light;
+}
 
 html,
 body {
@@ -43,13 +46,4 @@ h4 {
 }
 h5 {
   font-family: "Montserrat", "sans-serif";
-}
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }

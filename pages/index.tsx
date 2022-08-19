@@ -7,13 +7,10 @@ const Home: NextPage = () => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("http://api.britsov.uk/api/auth/login");
+    router.push("api.britsov.uk/api/auth/login");
   };
   return (
     <div>
-      <Head>
-        <title>Royal Navy Portal</title>
-      </Head>
       <div className={styles.IndexDiv}>
         <div className={styles.CentreDiv}>
           <h2 className={styles.CentreDivTitle}>Royal Navy Online Portal</h2>
