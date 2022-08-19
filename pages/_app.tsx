@@ -6,15 +6,26 @@ import axios from "axios";
 import Head from "next/head";
 
 function MyApp({ user, Component, pageProps, router }: any) {
-  if (router.pathname.startsWith("/dashboard")) {
-    return (
-      <div>
-        <Head>
-          <title>Royal Navy Portal</title>
-        </Head>
-        <DashboardLayout user={user} component={<Component {...pageProps} user={user} />}></DashboardLayout>
-      </div>
-    );
+  if (user) {
+    if (router.pathname.startsWith("/dashboard")) {
+      return (
+        <div>
+          <Head>
+            <title>Royal Navy Portal</title>
+          </Head>
+          <DashboardLayout user={user} component={<Component {...pageProps} user={user} />}></DashboardLayout>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <Head>
+            <title>Royal Navy Portal</title>
+          </Head>
+          <Component {...pageProps} />
+        </div>
+      );
+    }
   } else {
     return (
       <div>
@@ -30,7 +41,7 @@ function MyApp({ user, Component, pageProps, router }: any) {
 MyApp.getInitialProps = async ({ ctx }: any) => {
   try {
     const user = (
-      await axios.get("http://localhost:4000/api/auth/status", {
+      await axios.get("http://api.britsov.uk/api/auth/status", {
         withCredentials: true,
         headers: { Cookie: `connect.sid=${ctx.req.cookies["connect.sid"]}` },
       })
@@ -39,7 +50,8 @@ MyApp.getInitialProps = async ({ ctx }: any) => {
   } catch (err) {
     if (ctx.asPath === "/") {
     } else {
-      ctx.res.writeHead(302, { Location: "/" });
+      ctx.res.writeHead(302, { location: "/" });
+      ctx.res.end();
     }
     return { user: null };
   }

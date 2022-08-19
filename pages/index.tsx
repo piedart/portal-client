@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("api.britsov.uk/api/auth/login");
+    router.push("http://api.britsov.uk/api/auth/login");
   };
   return (
     <div>
