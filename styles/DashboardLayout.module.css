@@ -1,0 +1,9 @@
+.DashboardDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.DashboardSubDiv {
+  display: flex;
+  flex-direction: row;
+}

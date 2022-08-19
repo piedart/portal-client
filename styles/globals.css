@@ -1,9 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #000c40;
+  --secondary: #0d6efd;
+  --grey: #f3f3f3;
+  --white: #ffffff;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--grey);
 }
 
 a {
@@ -15,6 +28,22 @@ a {
   box-sizing: border-box;
 }
 
+h1 {
+  font-family: "Montserrat", "sans-serif";
+}
+h2 {
+  font-family: "Montserrat", "sans-serif";
+}
+h3 {
+  font-family: "Montserrat", "sans-serif";
+}
+
+h4 {
+  font-family: "Montserrat", "sans-serif";
+}
+h5 {
+  font-family: "Montserrat", "sans-serif";
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

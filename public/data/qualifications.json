@@ -1,0 +1,26 @@
+[
+  {
+    "id": "firefighting",
+    "name": "Firefighting Qualification",
+    "description": "This is a description of the firefighting qualification.",
+    "colour": "#cc2e2e",
+    "levels": [
+      {
+        "id": "junior_firefighter",
+        "name": "Junior Firefighter"
+      },
+      {
+        "id": "firefighter",
+        "name": "Firefighter"
+      },
+      {
+        "id": "senior_firefighter",
+        "name": "Senior Firefighter"
+      },
+      {
+        "id": "team_leader",
+        "name": "Team Leader"
+      }
+    ]
+  }
+]

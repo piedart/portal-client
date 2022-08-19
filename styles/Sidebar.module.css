@@ -1,0 +1,132 @@
+.Sidebar {
+  background-color: var(--primary);
+}
+
+.SidebarSectionHeader {
+  color: var(--grey);
+  font-size: 14px;
+  margin-left: 10%;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+
+.SidebarItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 85%;
+  height: 40px;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  /* margin-top: 5px; */
+  /* margin-bottom: 5px; */
+  border-radius: 5px;
+}
+
+.SidebarItem:hover {
+  background-color: var(--secondary);
+}
+
+.SidebarItemText {
+  color: var(--white);
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.SidebarItemIcon {
+  color: var(--white);
+  margin-left: 10px;
+  margin-right: 10px;
+  /* font-size: 20px; */
+}
+
+.SidebarDivider {
+  width: 85%;
+  background-color: rgba(143, 143, 143, 0.655);
+  height: 1px;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.SidebarFooter {
+  /* position: fixed; */
+  margin-top: 250px;
+}
+
+.SidebarTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 96px;
+  width: 100vw;
+}
+
+.SidebarTopTitleDiv {
+  height: 100%;
+  width: 280px;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.HamburgerIcon {
+  color: var(--grey);
+  font-size: 40px;
+}
+
+.SidebarSectionPadding4 {
+  width: 100%;
+  height: 191px;
+}
+@media only screen and (min-width: 0px) {
+  .Sidebar {
+    display: none;
+    width: 100vw;
+    height: 100px;
+  }
+
+  .SidebarTopRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--primary);
+    height: 100%;
+    width: calc(100% - 280px);
+  }
+
+  .SidebarTopTitleImage {
+    margin: 10px;
+  }
+
+  .SidebarTopTitleText {
+    color: var(--white);
+    font-size: 23px;
+    font-weight: 200;
+  }
+
+  .HamburgerIcon {
+    display: block;
+    margin: 25px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .Sidebar {
+    display: block;
+    height: 100vh;
+    width: 280px;
+  }
+
+  .SidebarTopRight {
+    display: none;
+  }
+
+  .HamburgerIcon {
+    display: none;
+  }
+}
