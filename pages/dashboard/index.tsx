@@ -102,14 +102,7 @@ const renderDeployments = (user: any) => {
 };
 
 const DashboardHome = ({ user }: any) => {
-  let rankslide;
-  if (user.rank === "[OR-2]") rankslide = "http://localhost:3000/rankslides/AbleRate.png";
-  else if (user.rank === "[OR-4]") rankslide = "http://localhost:3000/rankslides/LeadingRate.png";
-  else if (user.rank === "[OR-5]") rankslide = "http://localhost:3000/rankslides/PettyOfficer.png";
-  else if (user.rank === "[OR-7]") rankslide = "http://localhost:3000/rankslides/ChiefPettyOfficer.png";
-  else if (user.rank === "[OR-8]") rankslide = "http://localhost:3000/rankslides/WarrantOfficer2.png";
-  else if (user.rank === "[OR-9]") rankslide = "http://localhost:3000/rankslides/WarrantOfficer1.png";
-  else rankslide = "http://localhost:3000/rankslides/AbleRate.png";
+  let rankslide = `http://rn.britsov.uk/rankslides/${user.rank}.png`;
   return (
     <div className={styles.DashboardHome}>
       <div className={styles.Row1}>
