@@ -7,8 +7,8 @@ const SidebarSection = ({ header, items }: any) => {
       <h3 className={styles.SidebarSectionHeader}>{header}</h3>
       {items.map((item: any, index: number) => {
         return (
-          <Link href={`/dashboard/${item.page}`}>
-            <div className={styles.SidebarItem} key={`sidebar-${item.name}`}>
+          <Link key={`sidebar-${item.name}`} href={`/dashboard/${item.page}`}>
+            <div className={styles.SidebarItem}>
               <FontAwesomeIcon icon={item.icon} className={styles.SidebarItemIcon} />
               <h3 className={styles.SidebarItemText}>{item.name}</h3>
             </div>
