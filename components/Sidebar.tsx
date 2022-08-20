@@ -22,10 +22,10 @@ const renderActionsSection = (user: any) => {
       <SidebarSection
         header="Actions"
         items={[
-          { name: "Manage Events", icon: faCalendar, page: "manageevents" },
-          { name: "Manage Personnel", icon: faUser, page: "managepersonnel" },
-          { name: "Records", icon: faTable, page: "records" },
-          { name: "Data Pull", icon: faFileCsv, page: "datapull" },
+          { name: "Manage Events", icon: faCalendar, page: "/dashboard/manageevents" },
+          { name: "Manage Personnel", icon: faUser, page: "/dashboard/managepersonnel" },
+          { name: "Records", icon: faTable, page: "/dashboard/records" },
+          { name: "Data Pull", icon: faFileCsv, page: "/dashboard/datapull" },
         ]}
       />
     );
@@ -36,10 +36,10 @@ const Sidebar = ({ user }: any) => {
       <SidebarSection
         header="Main"
         items={[
-          { name: "Home", icon: faHouse, page: "/" },
-          { name: "Profile", icon: faUser, page: "profile" },
-          { name: "Attendance", icon: faListOl, page: "attendance" },
-          { name: "Events", icon: faCalendar, page: "events" },
+          { name: "Home", icon: faHouse, page: "/dashboard/" },
+          { name: "Profile", icon: faUser, page: "/dashboard/profile" },
+          { name: "Attendance", icon: faListOl, page: "/dashboard/attendance" },
+          { name: "Events", icon: faCalendar, page: "/dashboard/events" },
         ]}
       />
       <div className={styles.SidebarDivider}></div>
@@ -49,8 +49,8 @@ const Sidebar = ({ user }: any) => {
       <SidebarSection
         header="Legal"
         items={[
-          { name: "Terms of Service", icon: faAnchor, page: "termsofservice" },
-          { name: "Privacy Policy", icon: faAnchor, page: "privacypolicy" },
+          { name: "Terms of Service", icon: faAnchor, page: "/dashboard/termsofservice" },
+          { name: "Privacy Policy", icon: faAnchor, page: "/dashboard/privacypolicy" },
         ]}
       />
 
