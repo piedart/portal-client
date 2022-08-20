@@ -14,6 +14,7 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import SidebarSection from "./SidebarSection";
+import Link from "next/link";
 
 const renderActionsSection = (user: any) => {
   if (user.permissionLevel > 1)
@@ -21,10 +22,10 @@ const renderActionsSection = (user: any) => {
       <SidebarSection
         header="Actions"
         items={[
-          { name: "Manage Events", icon: faCalendar },
-          { name: "Manage Personnel", icon: faUsers },
-          { name: "Records", icon: faTable },
-          { name: "Data Pull", icon: faFileCsv },
+          { name: "Manage Events", icon: faCalendar, page: "manageevents" },
+          { name: "Manage Personnel", icon: faUser, page: "managepersonnel" },
+          { name: "Records", icon: faTable, page: "records" },
+          { name: "Data Pull", icon: faFileCsv, page: "datapull" },
         ]}
       />
     );
@@ -35,10 +36,10 @@ const Sidebar = ({ user }: any) => {
       <SidebarSection
         header="Main"
         items={[
-          { name: "Home", icon: faHouse },
-          { name: "Profile", icon: faUser },
-          { name: "Attendance", icon: faListOl },
-          { name: "Events", icon: faCalendar },
+          { name: "Home", icon: faHouse, page: "/" },
+          { name: "Profile", icon: faUser, page: "profile" },
+          { name: "Attendance", icon: faListOl, page: "attendance" },
+          { name: "Events", icon: faCalendar, page: "events" },
         ]}
       />
       <div className={styles.SidebarDivider}></div>
@@ -48,20 +49,24 @@ const Sidebar = ({ user }: any) => {
       <SidebarSection
         header="Legal"
         items={[
-          { name: "Terms of Service", icon: faAnchor },
-          { name: "Privacy Policy", icon: faAnchor },
+          { name: "Terms of Service", icon: faAnchor, page: "termsofservice" },
+          { name: "Privacy Policy", icon: faAnchor, page: "privacypolicy" },
         ]}
       />
 
       <div className={styles.SidebarFooter}>
-        <div className={styles.SidebarItem}>
-          <FontAwesomeIcon icon={faCircleInfo} className={styles.SidebarItemIcon} />
-          <h3 className={styles.SidebarItemText}>Support</h3>
-        </div>
-        <div className={styles.SidebarItem}>
-          <FontAwesomeIcon icon={faLock} className={styles.SidebarItemIcon} />
-          <h3 className={styles.SidebarItemText}>Logout</h3>
-        </div>
+        <Link href="/">
+          <div className={styles.SidebarItem}>
+            <FontAwesomeIcon icon={faCircleInfo} className={styles.SidebarItemIcon} />
+            <h3 className={styles.SidebarItemText}>Support</h3>
+          </div>
+        </Link>
+        <Link href="/">
+          <div className={styles.SidebarItem}>
+            <FontAwesomeIcon icon={faLock} className={styles.SidebarItemIcon} />
+            <h3 className={styles.SidebarItemText}>Logout</h3>
+          </div>
+        </Link>
       </div>
     </div>
   );
