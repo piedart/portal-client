@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import styles from "../styles/Index.module.css";
+import { fetchUser } from "../utils/fetchUser";
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -22,5 +23,7 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export const getServerSideProps = (ctx: any) => fetchUser(ctx);
 
 export default Home;

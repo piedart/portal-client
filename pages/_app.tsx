@@ -4,57 +4,20 @@ import { useRouter } from "next/router";
 import DashboardLayout from "../components/DashboardLayout";
 import axios from "axios";
 import Head from "next/head";
+import SidebarTop from "../components/SidebarTop";
+import Sidebar from "../components/Sidebar";
+import styles from "../styles/DashboardLayout.module.css";
 
 function MyApp({ user, Component, pageProps, router }: any) {
-  if (user) {
-    if (router.pathname.startsWith("/dashboard")) {
-      return (
-        <div>
-          <Head>
-            <title>Royal Navy Portal</title>
-          </Head>
-          <DashboardLayout user={user} component={<Component {...pageProps} user={user} />}></DashboardLayout>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <Head>
-            <title>Royal Navy Portal</title>
-          </Head>
-          <Component {...pageProps} />
-        </div>
-      );
-    }
-  } else {
-    return (
-      <div>
-        <Head>
-          <title>Royal Navy Portal</title>
-        </Head>
-        <Component {...pageProps} />
-      </div>
-    );
-  }
+  console.log(user);
+  return (
+    <div>
+      <Head>
+        <title>Royal Navy Portal</title>
+      </Head>
+      <Component {...pageProps} />
+    </div>
+  );
 }
-
-MyApp.getInitialProps = async ({ ctx }: any) => {
-  try {
-    const user = (
-      await axios.get("http://api.britsov.uk/api/auth/status", {
-        withCredentials: true,
-        headers: { Cookie: `connect.sid=${ctx.req.cookies["connect.sid"]}` },
-      })
-    ).data;
-    return { user: user };
-  } catch (err) {
-    if (ctx.asPath === "/") {
-    } else {
-      ctx.res.writeHead(302, { location: "/" });
-      ctx.res.end();
-    }
-    return { user: null };
-  }
-};
 
 export default MyApp;

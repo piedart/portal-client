@@ -27,6 +27,7 @@ const renderActionsSection = (user: any) => {
           { name: "Records", icon: faTable, page: "/dashboard/records" },
           { name: "Data Pull", icon: faFileCsv, page: "/dashboard/datapull" },
         ]}
+        user={user}
       />
     );
 };
@@ -41,6 +42,7 @@ const Sidebar = ({ user }: any) => {
           { name: "Attendance", icon: faListOl, page: "/dashboard/attendance" },
           { name: "Events", icon: faCalendar, page: "/dashboard/events" },
         ]}
+        user={user}
       />
       <div className={styles.SidebarDivider}></div>
 
@@ -52,6 +54,7 @@ const Sidebar = ({ user }: any) => {
           { name: "Terms of Service", icon: faAnchor, page: "/dashboard/termsofservice" },
           { name: "Privacy Policy", icon: faAnchor, page: "/dashboard/privacypolicy" },
         ]}
+        user={user}
       />
 
       <div className={styles.SidebarFooter}>

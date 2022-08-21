@@ -47,3 +47,13 @@ h4 {
 h5 {
   font-family: "Montserrat", "sans-serif";
 }
+
+.DashboardDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.DashboardSubDiv {
+  display: flex;
+  flex-direction: row;
+}

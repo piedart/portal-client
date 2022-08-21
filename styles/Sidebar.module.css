@@ -1,5 +1,6 @@
 .Sidebar {
   background-color: var(--primary);
+  position: fixed;
 }
 
 .SidebarSectionHeader {
@@ -21,6 +22,8 @@
   /* margin-top: 5px; */
   /* margin-bottom: 5px; */
   border-radius: 5px;
+  transition: 0.5s all ease;
+  cursor: pointer;
 }
 
 .SidebarItem:hover {
@@ -56,6 +59,7 @@
 }
 
 .SidebarTop {
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -76,6 +80,12 @@
 .HamburgerIcon {
   color: var(--grey);
   font-size: 40px;
+  transition: 0.5s all ease;
+}
+
+.HamburgerIcon:hover {
+  cursor: pointer;
+  font-size: 42px;
 }
 
 .SidebarSectionPadding4 {
